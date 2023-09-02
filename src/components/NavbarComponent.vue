@@ -1,14 +1,15 @@
 <script setup>
 import { useUserStore } from '../stores/user';
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
 const router = useRouter();
 const signOut = () => {
   userStore.signOut();
   router.push('/');
-}
+};
 </script>
+
 <template>
   <nav class="navbar contrast-primary-background-color">
     <div class="container-fluid">

@@ -2,14 +2,14 @@
 import { useUserStore } from '../stores/user';
 import { Form, Field, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
 const schema = yup.object().shape({
     email: yup.string().email('This field must be a valid email').required('This field is required!'),
     password: yup.string().min(6, 'Minimum length is 6 characters').required('This field is required!'),
     confirmPassword: yup.string().required('This field is required!').oneOf([yup.ref('password')], 'Passwords do not match')
-})
+});
 
 const router = useRouter();
 const userStore = useUserStore()
@@ -22,8 +22,9 @@ const submit = async (values) => {
         router.push('/tasks')
 
     } catch (err) { error.value = err.message; }
-}
+};
 </script>
+
 <template>
     <div class="card task-width">
         <div class="p-5">

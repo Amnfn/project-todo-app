@@ -2,8 +2,8 @@
 import { Form, Field, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
 import { useUserStore } from '../stores/user';
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const schema = yup.object().shape({
     password: yup.string().min(6, 'Minimum length is 6 characters').required('This field is required!'),
@@ -22,6 +22,7 @@ const submit = async (value) => {
     } catch (err) { error.value = err.message; }
 };
 </script>
+
 <template>
     <div class="card task-width">
         <div class="p-5">

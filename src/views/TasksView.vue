@@ -1,21 +1,23 @@
 <script setup>
-import { useTaskStore } from '@/stores/tasks'
+import { useTaskStore } from '@/stores/tasks';
 import { onMounted, ref } from 'vue';
 
 import TaskComponent from '../components/TaskComponent.vue';
 import { useUserStore } from '../stores/user';
+
 const taskStore = useTaskStore();
 const userStore = useUserStore();
 const title = ref();
 onMounted(async () => {
     await taskStore.fetchTasks()
-})
+});
 const addSubmit = async () => {
     await taskStore.addTask(title.value)
     await taskStore.fetchTasks()
     title.value = '';
-}
+};
 </script>
+
 <template>
     <div class="card task-width h-100">
         <div class=" p-3 p-sm-5 d-flex flex-column h-100">
@@ -74,6 +76,7 @@ const addSubmit = async () => {
         </div>
     </div>
 </template>
-<style>
 
+
+<style>
 </style>

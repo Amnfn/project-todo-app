@@ -16,6 +16,8 @@ const handleSubmit = async (value) => {
     router.push('/signIn');
 };
 </script>
+
+
 <template>
     <div class="card task-width">
         <div class="p-5">

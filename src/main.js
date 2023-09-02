@@ -12,15 +12,3 @@ const app = createApp(App);
 app.use(pinia);
 app.use(router);
 app.mount('#app');
-new Granim({
-  element: '#canvas-basic',
-  direction: 'diagonal',
-  isPausedWhenNotInView: true,
-  states: {
-    'default-state': {
-      gradients: [
-        ['#DEB887',],       
-      ]
-    }
-  }
-});

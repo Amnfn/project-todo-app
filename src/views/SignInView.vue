@@ -2,7 +2,7 @@
 import { useUserStore } from '../stores/user';
 import { Form, Field, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
 const schema = yup.object().shape({
@@ -21,8 +21,9 @@ const submit = async (values) => {
     } catch (err) {
         error.value = err.message;
     }
-}
+};
 </script>
+
 <template>
     <div class="card task-width">
         <div class="p-5">
@@ -60,16 +61,13 @@ const submit = async (values) => {
                         }}
                     </button>
                     </RouterLink>                   
-                </div>
-            
-                
+                </div>                
             </Form>
         </div>
     </div>
 </template>
 
 <style>
-
 </style>
 
 

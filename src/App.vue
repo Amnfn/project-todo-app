@@ -1,27 +1,29 @@
 <script setup>
-import NavbarComponent from './components/NavbarComponent.vue'
-import { storeToRefs } from 'pinia'
-import { useRouter } from 'vue-router'
-import { useUserStore } from '@/stores/user.js'
+import NavbarComponent from './components/NavbarComponent.vue';
+import { storeToRefs } from 'pinia';
+import { useRouter } from 'vue-router';
+import { useUserStore } from '@/stores/user.js';
 
-const router = useRouter()
-const userStore = useUserStore()
+const router = useRouter();
+const userStore = useUserStore();
 const { user } = storeToRefs(userStore)
-console.log('p', user.value)
+console.log('p', user.value);
+
 </script>
+
 <template>
   <div class="d-flex flex-column vh-100 ">
     <header>
       <NavbarComponent />
     </header>
     <main class="">
-      <div class="p-sm-5 h-100">
-        
+      <div class="p-sm-5 h-100">        
         <RouterView />
       </div>
     </main>
   </div>
 </template>
+
 <style>
 main {
   flex: 1 0 0;

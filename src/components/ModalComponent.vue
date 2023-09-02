@@ -1,6 +1,8 @@
 <script setup>
-const props = defineProps(['modalActive', 'modalTitle'])
+const props = defineProps(['modalActive', 'modalTitle']);
+
 </script>
+
 <template>
     <teleport to="body">
         <Transition name="modal-fade">
@@ -22,6 +24,7 @@ const props = defineProps(['modalActive', 'modalTitle'])
         </Transition>
     </teleport>
 </template>
+
 <style>
 
 </style>

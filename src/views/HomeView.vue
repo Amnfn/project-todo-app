@@ -1,13 +1,14 @@
 <script setup>
 
-import { storeToRefs } from 'pinia'
-import { useRouter } from 'vue-router'
-import { useUserStore } from '@/stores/user.js'
+import { storeToRefs } from 'pinia';
+import { useRouter } from 'vue-router';
+import { useUserStore } from '@/stores/user.js';
 
-const router = useRouter()
-const userStore = useUserStore()
-const { user } = storeToRefs(userStore)
-console.log('p', user.value)
+const router = useRouter();
+const userStore = useUserStore();
+const { user } = storeToRefs(userStore);
+console.log('p', user.value);
+
 </script>
 
 <template>
@@ -33,7 +34,7 @@ console.log('p', user.value)
 
         </div>      
     </div>
-
 </template>
+
 <style>
 </style>

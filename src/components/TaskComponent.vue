@@ -1,34 +1,32 @@
 <script setup>
-import { useTaskStore } from '@/stores/tasks'
-import { ref } from 'vue'
-import ModalComponent from '@/components/ModalComponent.vue'
+import { useTaskStore } from '@/stores/tasks';
+import { ref } from 'vue';
+import ModalComponent from '@/components/ModalComponent.vue';
 
 const taskStore = useTaskStore();
-const props = defineProps(['task'])
+const props = defineProps(['task']);
 const modalActive = ref(false);
 const updateDialog = ref(false);
 const title = ref();
 const completed = ref(props.task.is_complete);
 const date = ref(props.task.inserted_at.substr(0, 10));
-const year = ref(date.value.slice(0, 4));
-const month = ref(date.value.slice(5, 7));
-const day = ref(date.value.slice(8, 10))
+
 const deleteSubmit = async () => {
     await taskStore.deleteTask(props.task)
     modalActive.value = !modalActive.value
-}     
+};   
 const updateTask = async () => {
     await taskStore.updateTask(props.task, title.value)
     title.value = ''
     updateDialog.value = false;
-}
+};
 const completedTask = async () => {
     await taskStore.completeTask(props.task, !completed.value)
     completed.value = !completed.value
-}  
+};
 </script>
-<template>
-    
+
+<template>   
     <div>
         <li class="list-group-item list-group-item-action p-0" :data-completed="task.is_complete">
             <div class="d-flex flex-row justify-content-between align-items-center ">
@@ -86,6 +84,7 @@ const completedTask = async () => {
         </li>
     </div>
 </template>
-<style>
 
+
+<style>
 </style>
