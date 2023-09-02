@@ -1,0 +1,138 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(
+    to left,
+    rgb(140, 98, 225),
+    rgb(95, 147, 245)
+  );
+}
+#canvas-basic {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.task-width {
+  max-width: 850px;
+  margin: 0 auto;
+  background: linear-gradient(
+    to right,
+    rgb(120, 78, 205),
+    rgb(75, 117, 205)
+  );
+}
+.justify-content-between {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.justify-content-end {
+  margin-top: 40px;
+}
+.bi {
+  border-style: none;
+}
+.homepage {
+  color: white;
+  align-content: center;
+  background-color: rgb(127, 0, 260);
+  border-radius: 1.5em;
+  padding: 3rem 4rem;
+  
+}
+.mask-custom {
+  font-weight: 200;
+  background: rgba(24, 24, 16, 0.2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  padding: 50px;
+  margin-top: 30px;
+}
+.button-home {
+  color: #eee;
+  background: linear-gradient(
+    to right,
+    rgb(140, 98, 225),
+    rgb(95, 147, 245)
+  );
+  border-radius: 2em;
+  text-align: center;
+  padding: 10px 32px;
+  margin-top: 30px;
+  width: 260px;
+}
+.button-home:hover {
+  background-color: rgb(59, 11, 155); 
+}
+h3 {
+  text-align: center;
+}
+h5 {
+  color: rgb(207, 162, 162);
+}
+p { 
+  font-style: italic;
+}
+.tab-pane {
+  padding-bottom: 2px;
+}
+.link-secondary:hover {
+  background-color: rgb(190, 152, 221);
+  border-radius: 10px;
+
+}
+.link-secondary {
+  padding: 8px;
+}
+.link-secondary {
+  text-decoration: none;
+  color: white;
+}
+.bi {
+  border-color: white;
+}
+i {
+  color: aliceblue;
+}
+.check-btn {
+  border-color: rgb(59, 11, 155);  
+}
+.nav-link {
+  display: block;
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  text-decoration: none;
+  color: #eee;
+
+}
+  .nav {
+    --bs-nav-link-padding-x: .2rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ; 
+    --bs-nav-link-color: rgb(154, 150, 162); 
+    --bs-nav-link-hover-color: rgb(8, 4, 17); 
+    --bs-nav-link-disabled-color: rgb(59, 11, 155);
+  }
+
+.mb-3 {
+  margin-top: 40px;
+}
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+    opacity: 0;
+}
+.tab-pane {
+  background-color: violet;
+}
+
